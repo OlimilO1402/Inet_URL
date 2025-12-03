@@ -57,7 +57,7 @@ Begin VB.Form Form1
       NoFolders       =   0   'False
       Transparent     =   0   'False
       ViewID          =   "{0057D0E0-3573-11CF-AE69-08002B2E1262}"
-      Location        =   ""
+      Location        =   "http:///"
    End
    Begin VB.TextBox TxtHTML 
       Height          =   3615
@@ -115,10 +115,10 @@ End Function
 
 Private Sub Form_Resize()
     Dim L As Single: 'L = TxtHTML.Left
-    Dim T As Single: T = WebBrowser1.Top
+    Dim t As Single: t = WebBrowser1.Top
     Dim W As Single: W = Me.ScaleWidth - L
-    Dim H As Single: H = (Me.ScaleHeight - T) / 2
-    If W > 0 And H > 0 Then WebBrowser1.Move L, T, W, H
-    T = T + H
-    If W > 0 And H > 0 Then TxtHTML.Move L, T, W, H
+    Dim H As Single: H = (Me.ScaleHeight - t) / 2
+    If W > 0 And H > 0 Then WebBrowser1.Move L, t, W, H
+    t = t + H
+    If W > 0 And H > 0 Then TxtHTML.Move L, t, W, H
 End Sub
